@@ -111,3 +111,31 @@
 // }
 
 // analyzeArray function
+
+function analyzeArray(inputArray) {
+    
+    let sum = 0;
+    let min = inputArray[0];
+    let max = inputArray[0];
+    let length = inputArray.length;
+
+    for (let i = 0; i < inputArray.length; i++) {
+        sum += inputArray[i];
+
+        if (min !== inputArray[i]) {
+            if (inputArray[i] < min) {
+                min = inputArray[i];
+            }
+        }
+
+        if (max !== inputArray[i]) {
+            if (inputArray[i] > max) {
+                max = inputArray[i];
+            }
+        }
+    }
+    let average = sum / inputArray.length;
+
+    return {average, min, max, length};
+}
+module.exports = analyzeArray;

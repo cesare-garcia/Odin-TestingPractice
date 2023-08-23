@@ -27,3 +27,12 @@ const analyzeArray = require("./practice");
 // test("returns a string that has been shifted according to the key provided for the caesar cipher", () => {
 //     expect(caeserCipher("The secret is crime.", 113)).toBe("Cqn bnlanc rb larvn.");
 // });
+
+test("return an object with the following properties: average, min, max, length", () => {
+    expect(analyzeArray([6,12,3,4,2,6,37])).toEqual({
+        average: 10,
+        min: 2,
+        max: 37,
+        length: 7
+    });
+});
